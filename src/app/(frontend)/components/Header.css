@@ -1,0 +1,9 @@
+#header_comp {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    flex-wrap: wrap;
+    align-items: center;
+}

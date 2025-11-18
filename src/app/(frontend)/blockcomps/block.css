@@ -1,0 +1,19 @@
+#hero_block {
+    background-color: white;
+    border-radius: 1em;
+    color: black !important;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#content_block {
+    background-color: black;
+    border-radius: 1em;
+    padding: 0.5em;
+    color: white !important;
+    margin-bottom: 0.5em;
+}
+
+#hero_title {
+    margin: 10px !important;
+}
