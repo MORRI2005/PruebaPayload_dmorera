@@ -1,5 +1,6 @@
 import { Page } from '@/payload-types'
 import React from 'react'
+import '@/app/(frontend)/blockcomps/compoBlocks/Compos.css'
 
 // type ButtonBlockType = Extract<Page['layout'][0]['compos'][0], {blockType: 'button'}>
 
@@ -12,8 +13,10 @@ type ButtonBlockType = {
 
 export default function ButtonComponent({ block }: { block: ButtonBlockType }) {
   return (
-    <a href={block.url} className="mi-btn">
-      {block.text}
-    </a>
+    <div id="button_block">
+      <a href={block.url} className="mi-btn">
+        {block.text}
+      </a>
+    </div>
   )
 }
