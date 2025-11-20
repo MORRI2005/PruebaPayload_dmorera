@@ -22,7 +22,6 @@ export const Pages: CollectionConfig = {
     {
       name: 'layout',
       type: 'blocks',
-      required: true,
       blocks: [HeroBlock, ContentBlock],
     },
   ],

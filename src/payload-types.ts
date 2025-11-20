@@ -169,60 +169,62 @@ export interface Page {
   title: string;
   content?: string | null;
   slug: string;
-  layout: (
-    | {
-        title: string;
-        subheading: {
-          root: {
-            type: string;
-            children: {
-              type: any;
-              version: number;
+  layout?:
+    | (
+        | {
+            title: string;
+            subheading: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
               [k: string]: unknown;
-            }[];
-            direction: ('ltr' | 'rtl') | null;
-            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-            indent: number;
-            version: number;
-          };
-          [k: string]: unknown;
-        };
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'hero';
-      }
-    | {
-        title: string;
-        content: {
-          root: {
-            type: string;
-            children: {
-              type: any;
-              version: number;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero';
+          }
+        | {
+            title: string;
+            content: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
               [k: string]: unknown;
-            }[];
-            direction: ('ltr' | 'rtl') | null;
-            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-            indent: number;
-            version: number;
-          };
-          [k: string]: unknown;
-        };
-        compos?:
-          | {
-              text: string;
-              url?: string | null;
-              style?: ('primary' | 'secondary') | null;
-              id?: string | null;
-              blockName?: string | null;
-              blockType: 'button';
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'content';
-      }
-  )[];
+            };
+            compos?:
+              | {
+                  text: string;
+                  url?: string | null;
+                  style?: ('primary' | 'secondary') | null;
+                  id?: string | null;
+                  blockName?: string | null;
+                  blockType: 'button';
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'content';
+          }
+      )[]
+    | null;
   updatedAt: string;
   createdAt: string;
 }
