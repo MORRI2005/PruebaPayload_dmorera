@@ -17,3 +17,24 @@
 #hero_title {
     margin: 10px !important;
 }
+
+#page_block {
+    background-color: white;
+    margin-bottom: 0.5em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    color: black;
+    align-items: center;
+    padding: 0.3em;
+}
+
+#page_block_image > img {
+    height: 100px;
+    width: 100px;
+}
+
+#page_block_description {
+    font-size: 20px;
+}

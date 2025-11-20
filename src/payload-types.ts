@@ -224,6 +224,15 @@ export interface Page {
             blockName?: string | null;
             blockType: 'content';
           }
+        | {
+            title: string;
+            descripton: string;
+            image: number | Media;
+            page: number | Page;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'sites';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -385,6 +394,16 @@ export interface PagesSelect<T extends boolean = true> {
                           blockName?: T;
                         };
                   };
+              id?: T;
+              blockName?: T;
+            };
+        sites?:
+          | T
+          | {
+              title?: T;
+              descripton?: T;
+              image?: T;
+              page?: T;
               id?: T;
               blockName?: T;
             };

@@ -1,5 +1,6 @@
 import { ContentBlock } from '@/app/blocks/ContentBlock'
 import { HeroBlock } from '@/app/blocks/HeroBlock'
+import { PageBlock } from '@/app/blocks/PageBlock'
 import type { CollectionConfig } from 'payload'
 
 export const Pages: CollectionConfig = {
@@ -28,7 +29,7 @@ export const Pages: CollectionConfig = {
     {
       name: 'layout',
       type: 'blocks',
-      blocks: [HeroBlock, ContentBlock],
+      blocks: [HeroBlock, ContentBlock, PageBlock],
     },
   ],
 }

@@ -64,7 +64,6 @@ body {
 }
 
 .page {
-  background-color: brown;
   display: grid;
   grid-template-columns: 355px 355px;
   gap: 1em;

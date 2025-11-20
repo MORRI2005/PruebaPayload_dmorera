@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 import { Page } from '@/payload-types'
 import HeroBlock from '@/app/(frontend)/blockcomps/HeroBlock'
 import ContentBlock from '@/app/(frontend)/blockcomps/ContentBlock'
+import PageBlock from '@/app/(frontend)/blockcomps/PageBlock'
 
 import config from '@/payload.config'
 import './styles.css'
@@ -30,6 +31,8 @@ export default async function HomePage() {
           return <HeroBlock block={block} key={block.id} />
         case 'content':
           return <ContentBlock block={block} key={block.id} />
+        case 'sites':
+          return <PageBlock block={block} key={block.id} />
         default:
           return null
       }

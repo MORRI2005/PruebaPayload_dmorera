@@ -16,12 +16,12 @@ export default function HeroBlock({ block }: { block: PageProps }) {
         {typeof block?.image === 'object' && block.image.url && (
           <Image src={block.image.url} alt={block.image.alt} width={800} height={600} priority />
         )}
-        <div id="page_block_description">{block.description}</div>
       </div>
       <div id="page_block_content">
         <Link href={url}>
           <h2 id="page_block_title">{block.title}</h2>
         </Link>
+        <div id="page_block_description">{block.descripton}</div>
       </div>
     </div>
   )
