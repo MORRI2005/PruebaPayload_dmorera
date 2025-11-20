@@ -169,6 +169,7 @@ export interface Page {
   title: string;
   content?: string | null;
   slug: string;
+  parent?: (number | null) | Page;
   layout?:
     | (
         | {
@@ -354,6 +355,7 @@ export interface PagesSelect<T extends boolean = true> {
   title?: T;
   content?: T;
   slug?: T;
+  parent?: T;
   layout?:
     | T
     | {

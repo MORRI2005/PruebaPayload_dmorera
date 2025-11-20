@@ -20,6 +20,12 @@ export const Pages: CollectionConfig = {
       required: true,
     },
     {
+      name: 'parent',
+      type: 'relationship',
+      relationTo: 'pages',
+      label: 'Pagina padre',
+    },
+    {
       name: 'layout',
       type: 'blocks',
       blocks: [HeroBlock, ContentBlock],
