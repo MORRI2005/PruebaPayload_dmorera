@@ -3,12 +3,13 @@ import { RichText } from '@payloadcms/richtext-lexical/react'
 import '@/app/(frontend)/blockcomps/block.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import { buildPage } from '@/utils/buildPage'
 
 type PageProps = Extract<Page['layout'][0], { blockType: 'pageBlock' }>
 
 export default function HeroBlock({ block }: { block: PageProps }) {
   const page = block.page
-  const url = typeof page === 'string' ? `/pages/${page}` : page?.slug ? `/${page.slug}` : '#'
+  const url = typeof page === 'string' ? `/${page}` : `/${page.slug}`
 
   return (
     <div id="page_block">
